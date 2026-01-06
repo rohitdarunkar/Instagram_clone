@@ -1,0 +1,152 @@
+
+
+@import url('https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100..900;1,100..900&display=swap');
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+ font-family: "Roboto", sans-serif;
+}
+
+body {
+  background: #fafafa;
+  height: 100vh;
+  overflow: hidden; /* 🔑 prevent whole page scroll */
+}
+
+.app {
+  display: grid;
+  grid-template-columns: 220px 1fr 320px;
+  height: 100vh; /* 🔑 full screen */
+  max-width: 1400px;
+  margin: auto;
+}
+
+
+/* SIDEBAR */
+.sidebar,
+.right {
+  height: 100vh;
+  overflow: hidden;
+}
+
+
+.logo {
+  font-family: "Roboto", sans-serif;
+  font-size: 28px;
+  margin-bottom: 30px;
+}
+
+.sidebar nav a {
+  display: block;
+  padding: 10px 0;
+  font-size: 15px;
+  cursor: pointer;
+}
+
+/* FEED */
+/* Feed scrolls but scrollbar is hidden */
+.feed {
+  height: 100vh;
+  overflow-y: auto;
+  scrollbar-width: none;        /* Firefox */
+  -ms-overflow-style: none;     /* IE / Edge */
+}
+
+/* Chrome, Safari, Edge */
+.feed::-webkit-scrollbar {
+  display: none;
+}
+
+
+.stories {
+  display: flex;
+  gap: 16px;
+  margin-bottom: 24px;
+}
+
+.story {
+  text-align: center;
+  font-size: 12px;
+}
+
+.story img {
+  width: 60px;
+  height: 60px;
+  border-radius: 50%;
+  border: 2px solid #e1306c;
+}
+
+/* POST */
+.post {
+  background: white;
+  border: 1px solid #dbdbdb;
+  margin-bottom: 24px;
+}
+
+.post header {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  padding: 12px;
+}
+
+.post header img {
+  border-radius: 50%;
+}
+
+.post-img {
+  width: 100%;
+  height: auto;
+}
+
+.actions {
+  padding: 10px;
+  font-size: 20px;
+}
+
+.likes,
+.caption,
+.comments {
+  padding: 0 10px 8px;
+  font-size: 14px;
+}
+
+.caption strong {
+  font-weight: 600;
+}
+
+/* RIGHT PANEL */
+.right {
+  padding: 24px;
+}
+
+.profile,
+.suggestion {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+  margin-bottom: 16px;
+}
+
+.profile img,
+.suggestion img {
+  border-radius: 50%;
+}
+
+.switch,
+.suggestion a {
+  margin-left: auto;
+  font-size: 13px;
+  color: #0095f6;
+  cursor: pointer;
+}
+
+.suggestions .title {
+  display: flex;
+  justify-content: space-between;
+  font-size: 14px;
+  margin-bottom: 12px;
+  color: #8e8e8e;
+}
